@@ -34,7 +34,7 @@ a {
 }
 
 /* paragraph links inside main content — make them pop */
-#site-container a {
+#site-container a:link {
   color: #ff78b8;
   font-weight: 600;
   text-decoration: none;
@@ -42,18 +42,18 @@ a {
   will-change: color, transform, text-shadow;
 }
 
+#site-container a:visited {
+  color: #f1abc4;
+}
+
 #site-container a:hover {
-  color: #ff4d9e;
+  color: #a00249;
   transform: translateY(-2px);
   text-shadow: 0 4px 14px rgba(255,77,158,0.12);
 }
 
-#site-container a:visited {
-  color: #d79bb0;
-}
-
 #site-container a:active {
-  color: #ff2a85;
+  color: #f7086f;
 }
 
 /* layout wrapper */
@@ -91,7 +91,7 @@ section:hover {
   box-shadow: 0 10px 30px rgba(58,11,63,0.18);
 }
 
-section h2 {
+section h3 {
   color: #ff78b8;
   border-bottom: 2px solid #ff78b8;
   padding-bottom: 6px;
@@ -165,6 +165,12 @@ img {
   color: #ffdff4;
 }
 
+#sidebar li.hanging {
+  text-indent: -1.5em;  
+  padding-left: 1.5em;  
+  list-style-position: outside; 
+}
+
 /* footer */
 #footer {
   text-align: center;
@@ -226,16 +232,34 @@ span {
   font-weight: 600;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 /* breakpoints */
 /* Above 1200px */
 @media (min-width: 1201px) {
+  #site-container {
+    width: 1100px;
+  }
   #sidebar {
-    max-width: 300px;
+    max-width: 400px;
   }
 }
 
 /* 992px–1200px */
 @media (max-width: 1200px) and (min-width: 992px) {
+  #site-container {
+    width: 1100px;
+  }
   #sidebar {
     max-width: 280px;
   }
@@ -258,6 +282,7 @@ span {
   }
   #site-container {
     order: 1;
+    width: 95%;
   }
   #img-left1,
   #img-left2,
@@ -289,7 +314,7 @@ span {
     display: none;
   }
   #site-container {
-    width: 100%;
+    width: 95%;
   }
   #img-left1,
   #img-left2,
