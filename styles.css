@@ -230,11 +230,53 @@ img {
 }
 
 .highlight {
-  background-color: yellow;
+  background-color: rgb(228, 131, 252);
+  color: #1b0320;              /* 글자색 (진한 보라색) */
+  padding: 2px 4px;            /* 글자 주변 여백 */
+  border-radius: 4px;          /* 모서리 둥글게 */
+  font-weight: 600;            /* 글자 약간 굵게 */
+}
+
+.highlight.reveal:hover::after {
+  content: attr(data-alt);
+  color: #fff;
+  background-color: #ff00dd;
+  padding: 2px 6px;
+  border-radius: 4px;
+  position: absolute;
 }
 
 .underline {
   text-decoration: underline;
+}
+
+/* Easter Eggs */
+.egg-trigger {
+  background: #ffd66a;
+  color: #1b0320;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.egg-trigger:hover {
+  background: #ffb703;
+  color: #fff;
+}
+
+.secret {
+  display: none;
+  color: #ffd66a;
+  background-color: #0f1724;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+}
+
+.egg-trigger:hover + .secret {
+  display: block;
 }
 
 /* breakpoints */
